@@ -23,10 +23,11 @@
   <p>Files, photos, notes, contact details, card details and identity-document details that you enter or import are stored in LifeShelf's private app storage on your device. Private-space content is encrypted on the device. LifeShelf does not operate an account system or a server that receives your archive.</p>
   <h2>Optional Google Drive backup</h2>
   <p>If you choose to connect Google Drive and start a backup, LifeShelf requests the <code>drive.appdata</code> permission. It creates a complete archive, encrypts it on your device with AES-GCM before upload, and stores that encrypted file in LifeShelf's hidden Google Drive app-data folder. The archive may contain the items and attachments you chose to keep in LifeShelf, including private-space items when the private space is unlocked.</p>
+  <p>You can also opt into daily, weekly or monthly automatic backups. LifeShelf checks whether a backup is due when you open the app and uploads it if Google Drive access is already authorized. If you have a private space, LifeShelf waits until you unlock it before including its contents. Automatic backups do not run while the app is closed or while the private space is locked.</p>
   <ul>
     <li>Your backup recovery code is the key needed to decrypt a backup. LifeShelf does not upload or share that code with Google Drive.</li>
     <li>Google processes the authorization and stores the encrypted backup under Google's privacy terms. The app-data folder is hidden from the regular Drive file list and is accessible to LifeShelf through the permission you grant.</li>
-    <li>Backups are manual. LifeShelf uploads only when you choose to back up. You can revoke LifeShelf's Google access in your Google Account and remove the app's Drive data using Google's app-data controls.</li>
+    <li>Backups are optional. Manual backups upload when you request them; automatic backups upload only when enabled, due, and the app is open (with the private space unlocked when configured). You can revoke LifeShelf's Google access in your Google Account and remove the app's Drive data using Google's app-data controls.</li>
     <li>If you lose the recovery code, LifeShelf cannot decrypt a backup for you. Keep a copy somewhere safe and separate from the device.</li>
   </ul>
   <p>Google Drive API information: <a href="https://developers.google.com/workspace/drive/api/guides/appdata">Application data folder</a>.</p>
